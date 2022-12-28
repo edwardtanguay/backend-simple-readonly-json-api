@@ -5,9 +5,15 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"startold": "npm run build && nodemon dist/server.js",
-		"start": "npm run build && nodemon",
+		"dev": "nodemon",
 		"build": "tsc"
+	},
+	"nodemonConfig": {
+		"watch": [
+			"src"
+		],
+		"ext": "ts",
+		"exec": "npm run build && node dist/server.js"
 	},
 	"keywords": [],
 	"author": "",

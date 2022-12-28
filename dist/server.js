@@ -3,7 +3,7 @@ import fs from 'fs';
 import cors from 'cors';
 const app = express();
 app.use(cors());
-const PORT = 3009;
+const PORT = 3609;
 const jobs = JSON.parse(fs.readFileSync('./src/data/jobs.json', 'utf8'));
 app.get('/', (req, res) => {
     res.send('job site api');
