@@ -1,19 +1,18 @@
+import * as model from './model.js';
 import express from 'express';
-import fs from 'fs';
 import cors from 'cors';
 
 const app = express();
 app.use(cors());
 const PORT = 3609;
 
-const jobs = JSON.parse(fs.readFileSync('./src/data/jobs.json', 'utf8'));
 
 app.get('/', (req: express.Request, res: express.Response) => {
-	res.send('job site api');
+	res.send('<h1>Book Site API</h1>');
 });
 
-app.get('/jobs', (req: express.Request, res: express.Response) => {
-	res.json(jobs);
+app.get('/books', (req: express.Request, res: express.Response) => {
+	res.json(model.getBooks());
 });
 
 app.listen(PORT, () => {
