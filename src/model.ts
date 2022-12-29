@@ -16,3 +16,7 @@ const books: IBook[] = rawBooks.map(rawBook => {
 export const getBooks = () : IBook[] => {
 	return books;
 }
+
+export const getBook = (id: number) : IBook => {
+	return books.find(m => m.id === id);
+}

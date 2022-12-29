@@ -12,4 +12,7 @@ const books = rawBooks.map(rawBook => {
 export const getBooks = () => {
     return books;
 };
+export const getBook = (id) => {
+    return books.find(m => m.id === id);
+};
 //# sourceMappingURL=model.js.map
