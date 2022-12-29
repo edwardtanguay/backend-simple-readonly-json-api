@@ -2,10 +2,10 @@ import * as model from './model.js';
 import express from 'express';
 import cors from 'cors';
 import logger from './logger.js';
+import * as config from './config.js';
 const app = express();
 app.use(cors());
 app.use(logger);
-const PORT = 3609;
 app.get('/', (req, res) => {
     res.send(model.getApiInstructions());
 });
@@ -33,7 +33,7 @@ app.get('/books/:id', (req, res) => {
         }
     }
 });
-app.listen(PORT, () => {
-    console.log(`listening on port http://localhost:${PORT}`);
+app.listen(config.port, () => {
+    console.log(`listening on port http://localhost:${config.port}`);
 });
 //# sourceMappingURL=server.js.map
