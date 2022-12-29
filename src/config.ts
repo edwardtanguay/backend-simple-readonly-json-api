@@ -1,0 +1,1 @@
+export const logPathAndFileName = './src/logs/log.txt';
