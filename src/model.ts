@@ -15,6 +15,17 @@ const books: IBook[] = rawBooks.map(rawBook => {
 
 export const getApiInstructions = () => {
 	return `
+<style>
+	body {
+		background-color: #444;
+		padding: 1rem;
+		color: #fff;
+		font-family: courier;
+	}
+	code {
+		background-color: #333;
+	}
+</style>
 <h1>Book Site API</h1>
 <ul>
 	<li><code>/books</code> - all books</li>
