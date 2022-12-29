@@ -7,7 +7,7 @@ app.use(cors());
 const PORT = 3609;
 
 app.get('/', (req: express.Request, res: express.Response) => {
-	res.send('<h1>Book Site API</h1>');
+	res.send(model.getApiInstructions());
 });
 
 app.get('/books', (req: express.Request, res: express.Response) => {

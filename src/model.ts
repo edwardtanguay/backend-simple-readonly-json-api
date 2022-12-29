@@ -13,10 +13,20 @@ const books: IBook[] = rawBooks.map(rawBook => {
 	}
 });
 
-export const getBooks = () : IBook[] => {
+export const getApiInstructions = () => {
+	return `
+<h1>Book Site API</h1>
+<ul>
+	<li><code>/books</code> - all books</li>
+	<li><code>/books/3</code> - book with id 3</li>
+</ul>
+	`;
+}
+
+export const getBooks = (): IBook[] => {
 	return books;
 }
 
-export const getBook = (id: number) : IBook => {
+export const getBook = (id: number): IBook => {
 	return books.find(m => m.id === id);
 }

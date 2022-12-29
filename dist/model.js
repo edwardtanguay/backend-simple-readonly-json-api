@@ -9,6 +9,15 @@ const books = rawBooks.map(rawBook => {
         language: rawBook.language === '' ? 'english' : rawBook.language
     };
 });
+export const getApiInstructions = () => {
+    return `
+<h1>Book Site API</h1>
+<ul>
+	<li><code>/books</code> - all books</li>
+	<li><code>/books/3</code> - book with id 3</li>
+</ul>
+	`;
+};
 export const getBooks = () => {
     return books;
 };
