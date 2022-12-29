@@ -1,8 +1,10 @@
 import * as model from './model.js';
 import express from 'express';
 import cors from 'cors';
+import logger from './logger.js';
 const app = express();
 app.use(cors());
+app.use(logger);
 const PORT = 3609;
 app.get('/', (req, res) => {
     res.send(model.getApiInstructions());
